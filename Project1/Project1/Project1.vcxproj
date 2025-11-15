@@ -128,11 +128,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="descriptor_heap.cpp" />
     <ClCompile Include="DXGI.cpp" />
-    <ClCompile Include="ソース.cpp" />
+    <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="descriptor_heap.h" />
+    <ClInclude Include="device.h" />
     <ClInclude Include="DXGI.h" />
+    <ClInclude Include="render_target.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
