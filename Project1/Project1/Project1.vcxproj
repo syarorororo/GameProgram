@@ -144,6 +144,7 @@
     <ClCompile Include="swap_chain.cpp" />
     <ClCompile Include="triangle_polygon.cpp" />
     <ClCompile Include="Window.cpp" />
+    <ClCompile Include="root_signature.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="command_allocator.h" />
@@ -157,6 +158,7 @@
     <ClInclude Include="swap_chain.h" />
     <ClInclude Include="triangle_polygon.h" />
     <ClInclude Include="Window.h" />
+    <ClInclude Include="root_signature.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
