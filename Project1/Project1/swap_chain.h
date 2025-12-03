@@ -16,6 +16,6 @@ public:
     
     [[nodiscard]] const DXGI_SWAP_CHAIN_DESC1& getDesc() const noexcept;
 private:
-    IDXGISwapChain3* swapChain_{};      /// スワップチェイン
-    DXGI_SWAP_CHAIN_DESC1 swapChainDesc_{};  /// スワップチェインの設定
+    IDXGISwapChain3* swapChain_{};     
+    DXGI_SWAP_CHAIN_DESC1 swapChainDesc_{};  
 };
