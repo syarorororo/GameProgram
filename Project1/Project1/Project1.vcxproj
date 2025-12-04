@@ -164,9 +164,6 @@
     <ClInclude Include="Window.h" />
     <ClInclude Include="root_signature.h" />
   </ItemGroup>
-  <ItemGroup>
-    <FxCompile Include="shader.hlsl" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
