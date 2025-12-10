@@ -58,7 +58,7 @@ namespace {
     
     LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
         switch (msg) {
-        case WM_DESTROY:  // ウィンドウが閉じられたとき
+        case WM_DESTROY:  
             PostQuitMessage(0);
             return 0;
         }

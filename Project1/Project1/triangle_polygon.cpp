@@ -32,7 +32,7 @@ TrianglePolygon::~TrianglePolygon() {
 	return true;
 }
 
-[[nodiscerd]] bool TrianglePolygon::createVertexBuffer(const Device& device) noexcept {
+[[nodiscard]] bool TrianglePolygon::createVertexBuffer(const Device& device) noexcept {
 	Vertex triangleVertices[] = {
 			{  {0.0f, 0.5f, 0.0f}, {1.0f, 0.0f, 0.0f, 1.0f}}, // 上頂点（赤色）
 		{ {0.5f, -0.5f, 0.0f}, {0.0f, 1.0f, 0.0f, 1.0f}}, // 右下頂点（緑色）
@@ -146,9 +146,10 @@ TrianglePolygon::~TrianglePolygon() {
 [[nodiscard]] void TrianglePolygon::draw(const CommandList& commandList) noexcept {
 
 	commandList.get()->IASetVertexBuffers(0, 1, &vertexBufferView_);
-	
+
 	commandList.get()->IASetIndexBuffer(&indexBufferview_);
 
 	commandList.get()->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
 	commandList.get()->DrawIndexedInstanced(3, 1, 0, 0, 0);
+}

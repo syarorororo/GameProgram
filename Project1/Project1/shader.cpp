@@ -20,7 +20,7 @@ Shader::~Shader()
 }
 
 [[nodiscard]] bool Shader::create(const Device& device)noexcept {
-	const std::string filePath = "shader.hisl";
+	const std::string filePath = "shader.hlsl";
 	const std::wstring temp = std::wstring(filePath.begin(), filePath.end());
 	ID3DBlob* error{};
 
