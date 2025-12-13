@@ -1,4 +1,4 @@
-#include"shader.h"
+ï»¿#include"shader.h"
 #include<cassert>
 #include<string>
 
@@ -24,15 +24,15 @@ Shader::~Shader()
 	const std::wstring temp = std::wstring(filePath.begin(), filePath.end());
 	ID3DBlob* error{};
 
-	auto res = D3DCompileFromFile(temp.data(), nullptr, nullptr, "vs", "vs5_0", D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION, 0, &vertexShader_, &error);
+	auto res = D3DCompileFromFile(temp.data(), nullptr, nullptr, "vs", "vs_5_0", D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION, 0, &vertexShader_, &error);
 	if (FAILED(res)) {
 		char* p = static_cast<char*>(error->GetBufferPointer());
-		assert(false && "’¸“_ƒVƒF[ƒ_‚ÌƒRƒ“ƒpƒCƒ‹‚É¸”s‚µ‚Ü‚µ‚½");
+		assert(false && "é ‚ç‚¹ã‚·ã‚§ãƒ¼ãƒ€ã®ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã«å¤±æ•—ã—ã¾ã—ãŸ");
 	}
-	res = D3DCompileFromFile(temp.data(), nullptr, nullptr, "ps", "ps5_0", D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION, 0, &pixelShader_, &error);
+	res = D3DCompileFromFile(temp.data(), nullptr, nullptr, "ps", "ps_5_0", D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION, 0, &pixelShader_, &error);
 	if (FAILED(res)) {
 		char* p = static_cast<char*>(error->GetBufferPointer());
-		assert(false && "ƒsƒNƒZƒ‹ƒVƒF[ƒ_‚ÌƒRƒ“ƒpƒCƒ‹‚É¸”s‚µ‚Ü‚µ‚½");
+		assert(false && "ãƒ”ã‚¯ã‚»ãƒ«ã‚·ã‚§ãƒ¼ãƒ€ã®ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã«å¤±æ•—ã—ã¾ã—ãŸ");
 	}
 	if (error) {
 		error->Release();
@@ -42,13 +42,13 @@ Shader::~Shader()
 [[nodiscard]] ID3DBlob* Shader::vertexShader() const noexcept {
 	if (!vertexShader_)
 	{
-		assert(false && "’¸“_ƒVƒF[ƒ_‚ª–¢ì¬‚Å‚·");
+		assert(false && "é ‚ç‚¹ã‚·ã‚§ãƒ¼ãƒ€ãŒæœªä½œæˆã§ã™");
 	}
 	return vertexShader_;
 }
 [[nodiscard]] ID3DBlob* Shader::pixelShader() const noexcept {
 	if (!pixelShader_) {
-		assert(false && "ƒsƒNƒZƒ‹ƒVƒF[ƒ_‚ª–¢ì¬‚Å‚·");
+		assert(false && "ãƒ”ã‚¯ã‚»ãƒ«ã‚·ã‚§ãƒ¼ãƒ€ãŒæœªä½œæˆã§ã™");
 	}
 	return pixelShader_;
 }
